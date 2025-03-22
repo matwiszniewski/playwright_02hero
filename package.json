@@ -1,0 +1,28 @@
+{
+  "name": "playwright_02hero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx playwright test --project=dev",
+    "dev.visible": "npx playwright test --project=dev --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matwiszniewski/playwright_02hero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matwiszniewski/playwright_02hero/issues"
+  },
+  "homepage": "https://github.com/matwiszniewski/playwright_02hero#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.11"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
