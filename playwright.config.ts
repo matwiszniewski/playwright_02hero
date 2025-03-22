@@ -12,7 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  timeout:10000,
+  //timeout:10000,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -37,11 +37,18 @@ export default defineConfig({
   projects: [
     {
       name: 'dev',
-      use: { baseURL:"https://the-internet.herokuapp.com/",...devices['Desktop Chrome'] },
+      use: { baseURL: process.env.ENVIRONMENT || "https://the-internet.herokuapp.com/",...devices['Desktop Chrome'] },
     },
     {
       name: 'prod',
       use: { baseURL:"https://google.pl/",...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'no.browser'
+    },
+    {
+      name: 'playwright',
+      use: { ...devices['Desktop Chrome'] },
     },
 
 

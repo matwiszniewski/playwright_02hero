@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx playwright test --project=dev",
+    "dates": "npx playwright test tests/dates.spec.ts --project=no.browser",
+    "faker": "npx playwright test tests/faker.spec.ts --project=no.browser",
+    "playwright": "npx playwright test tests/example.spec.ts --project=playwright",
+    "pw": "npx playwright test tests/pw.spec.ts --project=playwright --headed",
     "dev.visible": "npx playwright test --project=dev --headed"
   },
   "repository": {
@@ -19,10 +23,12 @@
   },
   "homepage": "https://github.com/matwiszniewski/playwright_02hero#readme",
   "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
     "@playwright/test": "^1.51.1",
     "@types/node": "^22.13.11"
   },
   "dependencies": {
+    "dayjs": "^1.11.13",
     "dotenv": "^16.4.7"
   }
 }
