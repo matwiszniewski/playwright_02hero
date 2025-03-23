@@ -37,7 +37,7 @@ export default defineConfig({
   projects: [
     {
       name: 'dev',
-      use: { baseURL: process.env.ENVIRONMENT || "https://the-internet.herokuapp.com/",...devices['Desktop Chrome'] },
+      use: { baseURL: process.env.URLHeroku || "https://the-internet.herokuapp.com/",...devices['Desktop Chrome'] },
     },
     {
       name: 'prod',
