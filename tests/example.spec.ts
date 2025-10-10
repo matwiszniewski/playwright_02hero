@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import "dotenv/config";
+import {url } from "../helpers/data";
 //import {PlaywrightDevPage} from "../pages/login.page";
 
 // test.only("pom", async ({ page }) => {
@@ -14,7 +15,7 @@ import "dotenv/config";
 
 test("basics", async ({ page }) => {
   await test.step("Checking the first checkbox", async () => {
-    await page.goto("/checkboxes");
+    await page.goto(url.urlHeroku + "/checkboxes");
     const checkbox1 = page.getByRole("checkbox").first();
     await expect(checkbox1).toBeVisible();
     await expect(checkbox1).not.toBeChecked();
@@ -28,20 +29,20 @@ test("basics", async ({ page }) => {
 });
 
 test("basics2", async ({ page }) => {
-  await page.goto("/checkboxes");
+  await page.goto(url.urlHeroku + "/checkboxes");
   const checkbox2 = page.getByText(" checkbox 2");
   await expect(checkbox2).toBeVisible();
 });
 
 test("Checkbox checked", async ({ page }) => {
-  await page.goto("/checkboxes");
+  await page.goto(url.urlHeroku + "/checkboxes");
   const checkbox = page.getByRole("checkbox").last();
   await expect(checkbox).toBeChecked();
 });
 
 test("Basic test for fill inputs", async ({ page }) => {
   await test.step("Open login page", async () => {
-    await page.goto("/login");
+    await page.goto(url.urlHeroku + "/login");
     const classExample = page.locator(".example");
     await expect(classExample).toBeVisible();
     await expect(classExample).toContainText(
@@ -75,7 +76,7 @@ test("Basic test for fill inputs", async ({ page }) => {
 
 test("Basic test for dropdown lists", async ({ page }) => {
   await test.step("dropdown", async () => {
-    await page.goto("/dropdown");
+    await page.goto(url.urlHeroku+ "/dropdown");
     const dropdown = page.locator("#dropdown");
     //await dropdown.click()
     await dropdown.selectOption("1");
