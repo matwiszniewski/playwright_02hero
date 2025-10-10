@@ -16,3 +16,17 @@ export const data ={
     password: "tester123",
     passwordConfirm: "tester123"
 }
+
+export const url = {
+    urlHeroku : "https://the-internet.herokuapp.com",
+    urlAutomationStore : "https://automationteststore.com"
+}
+
+export const basicUser = {
+    userLogin : "tester123",
+    userPassword : "tester123"
+}
+
+export const api = "https://demoqa.com"
+
+export const userID = '0efffcb6-1161-4781-9788-d569719f3047'

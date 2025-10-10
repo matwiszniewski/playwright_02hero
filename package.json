@@ -7,9 +7,10 @@
     "dev": "npx playwright test --project=dev",
     "dates": "npx playwright test tests/dates.spec.ts --project=no.browser",
     "faker": "npx playwright test tests/faker.spec.ts --project=no.browser",
-    "playwright": "npx playwright test tests/example.spec.ts --project=playwright",
-    "pw": "npx playwright test tests/pw.spec.ts --project=playwright --headed",
-    "dev.visible": "npx playwright test --project=dev --headed"
+    "playwright": "npx playwright test --project=pw",
+    "pw": "npx playwright test tests/pw.spec.ts --project=pw --headed",
+    "dev.visible": "npx playwright test --project=dev --headed",
+    "api" : "npx playwright test tests/api.spec.ts --project=pw"
   },
   "repository": {
     "type": "git",

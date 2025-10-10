@@ -21,6 +21,7 @@ export class RegisterPage {
     passwordConfirm: Locator;
     subscribe: Locator;
     submitForm: Locator;
+    privacyCheck: Locator;
 
 
   
@@ -45,6 +46,7 @@ export class RegisterPage {
       this.passwordConfirm = this.page.locator('#AccountFrm_confirm')
       this.subscribe = this.page.getByRole('radio', { name: 'No' })
       this.submitForm = this.page.getByRole('button', { name: ' Continue' })
+      this.privacyCheck = this.page.locator('#AccountFrm_agree')
     }
 
     async clickContinue(): Promise<void> {
@@ -69,7 +71,8 @@ export class RegisterPage {
         await this.password.fill(password);
         await this.passwordConfirm.fill(passwordConfirm);
         await this.subscribe.check();
-        await this.submitForm.click()
+        await this.privacyCheck.check();
+        await this.submitForm.click();
         await this.page.waitForTimeout(5000);
       }
 
