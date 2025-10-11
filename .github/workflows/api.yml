@@ -1,4 +1,7 @@
 name: API CI
+env:
+  USER_API: ${{secrets.USER_SECRET_API}}
+  API_USER_PASSWORD: ${{secrets.PASSWORD_API}}
 
 on:
   push:
