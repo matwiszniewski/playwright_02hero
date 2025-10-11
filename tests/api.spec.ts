@@ -5,7 +5,7 @@ import "dotenv/config";
 let user = ""
 let token: string;
 
-test.describe.configure({mode:"serial"}); //1worker in this file
+test.describe.configure({mode:"serial"}); //1worker in this file, no parallel tests
 
 test.beforeAll("Generate token", async ({ request }) => {
     const response = await request.post(api +"/Account/v1/GenerateToken", {
@@ -81,7 +81,7 @@ test("GET user", async ({ request }) => {
 
   
   
-test.skip("Adding books", async ({ request }) => {
+test("Adding books", async ({ request }) => {
     const response = await request.post(api +"/BookStore/v1/Books", {
         headers:{
             'Authorization': `Bearer ${token}`,
@@ -138,7 +138,7 @@ test("GET user- check books", async ({ request }) => {
   })
 
 
-  test("GET user- check books after changing book iban", async ({ request }) => {
+  test.skip("GET user- check books after changing book iban", async ({ request }) => {
     const response = await request.get(`${api}/Account/v1/User/${userID}`, {
         headers:{
             'Authorization': `Bearer ${token}`,
