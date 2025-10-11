@@ -9,8 +9,9 @@
     "faker": "npx playwright test tests/faker.spec.ts --project=no.browser",
     "playwright": "npx playwright test --project=pw",
     "pw": "npx playwright test tests/pw.spec.ts --project=pw --headed",
+    "pw.headless": "npx playwright test tests/pw.spec.ts --project=pw",
     "dev.visible": "npx playwright test --project=dev --headed",
-    "api" : "npx playwright test tests/api.spec.ts --project=pw"
+    "api" : "npx playwright test tests/api.spec.ts --project=no.browser"
   },
   "repository": {
     "type": "git",
