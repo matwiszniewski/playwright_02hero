@@ -11,7 +11,10 @@
     "pw": "npx playwright test tests/pw.spec.ts --project=pw --headed",
     "pw.headless": "npx playwright test tests/pw.spec.ts --project=no.browser",
     "dev.visible": "npx playwright test --project=dev --headed",
-    "api" : "npx playwright test tests/api.spec.ts --project=no.browser"
+    "api" : "npx playwright test tests/api.spec.ts --project=no.browser",
+    "file.upload" :"npx playwright test tests/file.upload.spec.ts --project=pw --headed",
+    "file.download" :"npx playwright test tests/file.download.spec.ts --project=pw --headed",
+    "mock" :"npx playwright test tests/mock.spec.ts --project=pw --headed"
   },
   "repository": {
     "type": "git",
